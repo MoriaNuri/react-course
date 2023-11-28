@@ -69,17 +69,23 @@ const initialState={
   speed:200,
   model:"Mustang"
   }
+
 function Home() {
+
   const[counter,setCounter]=React.useState(0)
   const[car,setCar]=React.useState(initialState)
+
   const updateCounter=(newSpeed)=>{
   setCounter({
   counter:newSpeed
-  })}
+  })
+}
+
 
     return (
      <div>
       <Counter counter={counter} updateCounter={updateCounter}/>
+      <Car car={car} setCar={setCar} />
      </div>
     );
   
