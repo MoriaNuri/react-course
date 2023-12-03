@@ -1,7 +1,7 @@
 import React from "react";
 
+// Class component
 class Car extends React.Component{
-
     render(){
     return(
         <div>

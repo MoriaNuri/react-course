@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Car from './Car';
 
-// list& key
+// List& key
 
 const initialState=[
   {
@@ -54,7 +54,7 @@ React.useEffect(() => {
   return (
     <div >
       {cars.map((car)=>(
-        <Car  car={car}  updateCarSpeed={updateCarSpeed} />
+        <Car car={car} updateCarSpeed={updateCarSpeed} />
       )
       )}
     </div>

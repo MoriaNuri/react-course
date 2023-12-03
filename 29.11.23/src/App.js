@@ -5,12 +5,14 @@ import Calc from './components/Calc';
 import Home from './components/Home';
 
 function App() {
-  // שמירה בזיכרון המקומי של המשתמש ע"י ההוק שכתבנו 
+ // Save to local storage with custom hook
+ // the counter saved in local storage and will be saved even if we refresh the page
   const [counter, setCounter] = useLocalStorage('counter',0)
   const [isOpen, setIsOpen] = useLocalStorage('open',false)
   const [error, setError] = React.useState(false)
   
   React.useEffect(() => {
+    // the callback function will be called every time the counter changes
     if (counter>5)  {
     console.log('error');
     setError(true)
@@ -24,11 +26,11 @@ function App() {
       console.log(window.innerWidth);
     }
     window.addEventListener('resize', handleResize)
-    // מחיקת הצמדת אירועים בירידת הקומפוננטה
+    // return a function to clean up the event listener
   return () => {
     window.removeEventListener('resize', handleResize)
   }
-  // המערך תלויות ריק ולכן הצמדת האירוע תקרה פעם אחת בעליית הקומפוננטה
+   // the callback function will be called only once when the component mounts
 }, [])
 
 
@@ -39,7 +41,7 @@ function App() {
     <button onClick={()=>setCounter(counter+1)}>+</button>
     <button onClick={()=>setCounter(0)}>Restart</button>
     {counter}
-    {/* יוצג רק כאשר יש שגיאה */}
+    {/* the error display only if the counter is bigger than 5 */}
     {error && <div>error</div>}
     <Calc/>
     <Home/>

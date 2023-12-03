@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-function Counter({counter,updateCounter}){
-
+const Counter=({counter,updateCounter})=>{
     return(
         <div>
             <h1>Counter</h1>

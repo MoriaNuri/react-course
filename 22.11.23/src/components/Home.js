@@ -5,6 +5,7 @@ import Counter from './Counter';
 
 
   // Class component
+
 // class Home extends React.Component {
 //   state={
 //   display:"counter",
@@ -71,7 +72,7 @@ const initialState={
   }
 
 function Home() {
-
+// useState hook
   const[counter,setCounter]=React.useState(0)
   const[car,setCar]=React.useState(initialState)
 

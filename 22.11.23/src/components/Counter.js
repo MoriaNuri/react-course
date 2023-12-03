@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// Function component
 function Counter({counter,updateCounter}){
 
     return(

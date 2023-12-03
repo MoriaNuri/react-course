@@ -1,8 +1,7 @@
 import React from "react";
 
 const Car  =(props)=>{
-    const {car,updateCarSpeed
-    }=props
+    const {car,updateCarSpeed}=props
     return(
         <div>
             <h1>{car.name}</h1>

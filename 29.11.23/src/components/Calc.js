@@ -1,9 +1,7 @@
 import useCalc from "../hooks/useCalc"
 
-
-
 const Calc =()=>{
-// inline style 
+// Inline style 
     const styles={
         display:'flex',
         flexDirection:'column',
@@ -12,6 +10,7 @@ const Calc =()=>{
         border:'1px solid black',
         boxShadow:'0 0 10px rgba(0,0,0,0.5)',
     }
+// Custom Hook
     const [number, result, increment, decrement]= useCalc(1)
     return(
         <div style={styles}>
