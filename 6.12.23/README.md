@@ -1,11 +1,14 @@
-ק'
-Hooks
-Custom hook
-style
-Lists
-List Keys
-Lists & State
-Component Styling
+We learn:
+Additional hooks-
+use memo
+use callback
+use context
+
+Ajax
+Promise
+fetch API
+then & catch
+Async await
 
 # Getting Started with Create React App
 
